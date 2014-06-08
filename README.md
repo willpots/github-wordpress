@@ -5,6 +5,6 @@ Very early stage version that connects to Github through Wordpress's shortcode A
 ##API
 
 ###Fetch Repos
-  [github user="username"]
+    [github user="username"]
 
 Includes a list of a user's public repositories in the Wordpress body page.
