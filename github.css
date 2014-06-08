@@ -1,0 +1,21 @@
+.repo {
+  border: 1pt solid #ddd;
+  margin: 3px 0;
+  padding: 10px 5px;
+  position: relative;
+  display:block;
+  font-family: 'Franklin Gothic Book',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color:#333;
+}
+.repo .lang {
+  font-size: 12px;
+  position:absolute;
+  right:5px;
+  top:0;
+}
+.repo .title {
+
+}
+.repo .description {
+  line-height: 1;
+}
