@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Github Wordpress
- * @version 1.0
+ * @version 1.0.0
  */
 /*
 Plugin Name: Github Wordpress
 Plugin URI: http://github.com/willpots/github-wordpress
 Description: Wordpress interface for pulling in information from Github.
 Author: Will Potter
-Version: 1.0
+Version: 1.0.0
 Author URI: http://willpotter.co/
 */
 // Add Shortcode
