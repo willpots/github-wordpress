@@ -1,12 +1,35 @@
 .repo {
   border: 1pt solid #ddd;
-  margin: 3px 0;
+  margin: 6px 0;
   padding: 10px 5px;
   position: relative;
   display:block;
   font-family: 'Franklin Gothic Book',"Helvetica Neue",Helvetica,Arial,sans-serif;
   color:#333;
 }
+.repo:after {
+  content:'';
+  display:block;
+  width:300px;
+  height:2px;
+  position:absolute;
+  left:0;
+  top:0;
+  transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  -webkit-transition: all .1s linear;
+  -o-transition: all .1s linear;
+  -ms-transition: all .1s linear;
+}
+.repo:hover:after {
+  height:5px;
+}
+.repo.css:after {background:rgba(210, 51, 51, 1);}
+.repo.javascript:after {background:rgba(51, 160, 210, 1);}
+.repo.php:after {background:rgba(51, 210, 85, 1);}
+.repo.ruby:after {background:rgba(51, 55, 210, 1);}
+.repo.python:after {background:rgba(210, 140, 51, 1);}
+.repo.java:after{background:rgba(51, 210, 155, 1);}
 .repo .lang {
   font-size: 12px;
   position:absolute;
@@ -14,7 +37,8 @@
   top:0;
 }
 .repo .title {
-
+  font-size: 24px;
+  font-family: 'Franklin Gothic Medium',"Helvetica Neue Bold",Helvetica,Arial,sans-serif;
 }
 .repo .description {
   line-height: 1;

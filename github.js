@@ -1,5 +1,8 @@
 function get_template(obj) {
-  var result = "<a target='_blank' href='" + obj['html_url'] + "' class='repo " + obj['language'] + "'>";
+  if(obj['language'] === null) {
+    obj['language']="";
+  }
+  var result = "<a target='_blank' href='" + obj['html_url'] + "' class='repo " + obj['language'].toLowerCase() + "'>";
   result += "<div class='lang'>" + obj['language'] + "</div>";
   result += "<div class='title'>" + obj['name'] + "</div>";
   result += "<div class='description'>" + obj['description'] + "</div>";
@@ -11,9 +14,9 @@ function fetchRepos(user) {
 
   jQuery(document).ready(function() {
     console.log("pulling github repos for " + user);
-    jQuery.getJSON("https://api.github.com/users/" + user + "/repos?callback=?", function(result) {
+    jQuery.getJSON("https://api.github.com/users/" + user + "/repos?sort=updated&callback=?", function(result) {
+      console.log(result.data);
       for (var x in result.data) {
-        console.log(result.data);
         obj = result.data[x];
         jQuery(".repos-" + user).append(get_template(obj));
       }
